@@ -1,0 +1,58 @@
+# Documentação do Projeto: Predição de Aprovação Escolar
+
+## 1. Objetivo do Projeto
+O objetivo deste projeto é prever a aprovação de estudantes do ensino médio com base em dados de desempenho escolar, utilizando técnicas de análise exploratória, tratamento de dados e diferentes modelos de machine learning, incluindo redes neurais.
+
+## 2. Estrutura do Projeto
+- **dados/raw/**: Contém os arquivos de dados originais (student-mat.csv e student-por.csv).
+- **requirements.txt**: Lista de dependências necessárias para rodar o projeto.
+- **analise_modelagem_unica.ipynb** ou **Rede Neural.ipynb**: Notebook principal com todo o fluxo do projeto.
+- **documentacao.txt**: Este arquivo, explicando cada etapa do projeto.
+
+## 3. Descrição dos Dados
+Os dados utilizados são referentes ao desempenho de estudantes em matemática e português, contendo informações como idade, escolaridade dos pais, tempo de estudo, notas, entre outros.
+
+## 4. Etapas do Projeto
+
+### 4.1. Importação de Bibliotecas
+Importa todas as bibliotecas necessárias para manipulação de dados, visualização e modelagem.
+
+### 4.2. Carregamento dos Dados
+Os dados são carregados a partir dos arquivos CSV presentes em `dados/raw/`.
+
+### 4.3. Análise Exploratória (EDA)
+Inclui visualização das primeiras linhas, estatísticas descritivas, análise de valores ausentes, distribuição das notas e matriz de correlação (com tradução das variáveis para português).
+
+### 4.4. Tratamento e Preparação dos Dados
+- **Tratamento de valores ausentes:** Preenchimento com mediana (numéricos) ou moda (categóricos).
+- **Criação de novas features:** Média das notas, diferenças entre notas, variável binária de aprovação.
+- **Codificação e normalização:** Variáveis categóricas são codificadas e variáveis numéricas (exceto a variável alvo) são normalizadas.
+
+### 4.5. Modelagem
+- **Classificação:** Modelos de Regressão Logística, Random Forest, SVM e Rede Neural para prever aprovação (0 ou 1).
+- **Regressão:** Modelos de Regressão Linear, Random Forest Regressor, SVR e Rede Neural para prever a nota final (G3).
+
+### 4.6. Avaliação dos Modelos
+- **Classificação:** Métricas de acurácia, precisão, recall, F1-score e curva ROC.
+- **Regressão:** Métricas de MAE, RMSE e R².
+
+### 4.7. Análise Comparativa
+Comparação dos resultados dos modelos em termos de desempenho, interpretabilidade e tempo de treinamento.
+
+### 4.8. Relatório Final
+Seção final do notebook com conclusões, aprendizados e desafios encontrados.
+
+## 5. Como Executar o Projeto
+1. Instale as dependências:
+   ```
+   pip install -r requirements.txt
+   ```
+2. Execute o Jupyter Notebook:
+   ```
+   python -m notebook
+   ```
+3. Abra o notebook principal e execute célula por célula.
+
+## 6. Observações
+- Certifique-se de que os arquivos de dados estejam na pasta correta.
+- O projeto pode ser executado tanto no Jupyter quanto no Google Colab (basta fazer upload dos dados). 
